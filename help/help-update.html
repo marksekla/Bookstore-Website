@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to update the Bookworm Haven website content for administrators and content managers.">
+    <meta name="keywords" content="website update, content management, update catalog, add new books">
+    <meta name="author" content="Mark Sekla">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    
+    <!-- Title -->
+    <title>Updating Website Content - Bookworm Haven Help</title>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-default.css">
+    <link rel="stylesheet" href="../css/theme-dark.css">
+    <link rel="stylesheet" href="../css/theme-seasonal.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+    
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../catalog.html">Books</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+    
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                        <option value="default">Default Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="seasonal">Seasonal Theme</option>
+                    </select>
+            </div>
+    
+            <div class="help-link">
+                <a href="help-index.html" class="active">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="wiki-container">
+                <!-- Wiki Sidebar -->
+                <aside class="wiki-sidebar">
+                    <h3>Help Topics</h3>
+                    <ul>
+                        <li><a href="help-index.html">Getting Started</a></li>
+                        <li><a href="help-browsing.html">Browsing the Catalog</a></li>
+                        <li><a href="help-themes.html">Changing Themes</a></li>
+                        <li><a href="help-forms.html">Using Forms</a></li>
+                        <li><a href="help-update.html" class="active">Updating Website Content</a></li>
+                    </ul>
+                    </br>
+                    <h3>Need More Help?</h3>
+                    <p>Contact us at support@bookwormhaven.com</p>
+                </aside>
+                
+                <!-- Wiki Content -->
+                <div class="wiki-content">
+                    <h1>Updating Website Content</h1>
+                    <p>This guide explains how to update the Bookworm Haven website content, including adding new books, changing images, and modifying the catalog. This guide is intended for website administrators and content managers.</p>
+                    </br>
+                    <h2>Updating the Book Catalog</h2>
+                    <p>The book catalog is stored in a JSON file, which makes it easy to update without programming knowledge. Follow these steps to add, modify, or remove books from the catalog:</p>
+                    </br>
+                    <h3>Locating the Books JSON File</h3>
+                    <p>The book catalog is stored in the file <code>data/books.json</code>. You can edit this file using any text editor such as Notepad, TextEdit, or Visual Studio Code.</p>
+                    </br>
+                    <h3>Understanding the JSON Structure</h3>
+                    <p>Each book in the catalog is represented as a JSON object with the following properties:</p>
+                    <pre>
+{
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "category": "Classic",
+    "price": 10.99,
+    "image": "book1.jpg"
+}
+</pre>
+                    </br>
+                    <h3>Adding a New Book</h3>
+                    <p>To add a new book to the catalog:</p>
+                    <ol>
+                        <li>Open the <code>books.json</code> file in a text editor</li>
+                        <li>Locate the closing bracket <code>]</code> at the end of the file</li>
+                        <li>Before the closing bracket, add a comma after the last book's closing curly brace <code>}</code></li>
+                        <li>Add a new book entry following the JSON structure shown above</li>
+                        <li>Save the file</li>
+                    </ol>
+                    </br>
+                    <h3>Modifying an Existing Book</h3>
+                    <p>To modify an existing book:</p>
+                    <ol>
+                        <li>Open the <code>books.json</code> file in a text editor</li>
+                        <li>Locate the book entry you want to modify</li>
+                        <li>Change the values as needed, keeping the JSON structure intact</li>
+                        <li>Save the file</li>
+                    </ol>
+                    </br>
+                    <h3>Removing a Book</h3>
+                    <p>To remove a book from the catalog:</p>
+                    <ol>
+                        <li>Open the <code>books.json</code> file in a text editor</li>
+                        <li>Locate the book entry you want to remove</li>
+                        <li>Delete the entire book object, including the opening and closing curly braces</li>
+                        <li>Make sure to maintain proper JSON syntax by removing any trailing commas if needed</li>
+                        <li>Save the file</li>
+                    </ol>
+                    
+                    <p><strong>Important:</strong> Always make a backup of the <code>books.json</code> file before making changes. Make sure the JSON syntax is correct, or the website may not display the books properly.</p>
+                    </br>
+                    <h2>Adding or Changing Book Images</h2>
+                    <p>Each book in the catalog has an associated image. Follow these steps to add or change book images:</p>
+                    
+                    <h3>Preparing Book Images</h3>
+                    <p>For best results, prepare book images with the following specifications:</p>
+                    <ul>
+                        <li>Format: JPG or PNG</li>
+                        <li>Recommended size: 400x600 pixels</li>
+                        <li>Maximum file size: 500KB</li>
+                        <li>Use copyright-free images or images you have permission to use</li>
+                    </ul>
+                    </br>
+                    <h3>Adding New Book Images</h3>
+                    <ol>
+                        <li>Name your image file appropriately (e.g., <code>book21.jpg</code> for the 21st book)</li>
+                        <li>Upload the image file to the <code>images/</code> directory on the server</li>
+                        <li>Update the <code>books.json</code> file to reference the new image file name</li>
+                    </ol>
+                    </br>
+                    <h3>Replacing Existing Book Images</h3>
+                    <ol>
+                        <li>Create or prepare a new image file</li>
+                        <li>Either use the same filename as the existing image to automatically replace it, or</li>
+                        <li>Use a new filename and update the <code>image</code> property in the <code>books.json</code> file</li>
+                        <li>Upload the new image to the <code>images/</code> directory on the server</li>
+                    </ol>
+                    </br>
+                    <h2>Updating Media Files</h2>
+                    <p>The website includes audio and video files that can also be updated:</p>
+                    
+                    <h3>Replacing Media Files</h3>
+                    <ol>
+                        <li>Prepare your new media file in the appropriate format (MP4 for video, MP3 for audio)</li>
+                        <li>Name it to match the existing file you want to replace</li>
+                        <li>Upload the file to the <code>media/</code> directory on the server</li>
+                    </ol>
+                    </br>
+                    <h2>Troubleshooting</h2>
+                    <p>If you encounter issues after updating content:</p>
+                    
+                    <h3>JSON Syntax Errors</h3>
+                    <p>If books don't appear after updating the JSON file:</p>
+                    <ul>
+                        <li>Check for proper JSON syntax - all quotes, commas, and brackets must be correctly placed</li>
+                        <li>Verify that all entries have commas between them, but no comma after the last entry</li>
+                        <li>Use a JSON validator tool online to check your file</li>
+                    </ul>
+                    </br>
+                    <h3>Image Issues</h3>
+                    <p>If images don't appear:</p>
+                    <ul>
+                        <li>Verify that the image filename in the JSON file exactly matches the actual file (case-sensitive)</li>
+                        <li>Check that the image is uploaded to the correct directory</li>
+                        <li>Ensure the image is in a supported format (JPG or PNG)</li>
+                    </ul>
+                    </br>
+                    <h3>Getting Help</h3>
+                    <p>If you need additional assistance with updating the website content, contact the development team at dev@bookwormhaven.com.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../catalog.html">All Books</a></li>
+                        <li><a href="../catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="../catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="../catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../quote.html">Book Quote</a></li>
+                        <li><a href="../book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/themes.js"></script>
+</body>
+</html>

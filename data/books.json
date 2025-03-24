@@ -1,0 +1,142 @@
+[
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "category": "Classic",
+        "price": 10.99,
+        "image": "book1.jpg"
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "category": "Classic",
+        "price": 12.99,
+        "image": "book2.jpg"
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "category": "Dystopian",
+        "price": 11.49,
+        "image": "book3.jpg"
+    },
+    {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "category": "Dystopian",
+        "price": 13.99,
+        "image": "book4.jpg"
+    },
+    {
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "category": "Classic",
+        "price": 9.99,
+        "image": "book5.jpg"
+    },
+    {
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "category": "Fantasy",
+        "price": 14.99,
+        "image": "book6.jpg"
+    },
+    {
+        "title": "The Fellowship of the Ring",
+        "author": "J.R.R. Tolkien",
+        "category": "Fantasy",
+        "price": 15.99,
+        "image": "book7.jpg"
+    },
+    {
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "price": 16.99,
+        "image": "book8.jpg"
+    },
+    {
+        "title": "Harry Potter and the Chamber of Secrets",
+        "author": "J.K. Rowling",
+        "category": "Fantasy",
+        "price": 17.99,
+        "image": "book9.jpg"
+    },
+    {
+        "title": "Percy Jackson: The Lightning Thief",
+        "author": "Rick Riordan",
+        "category": "Fantasy",
+        "price": 13.49,
+        "image": "book10.jpg"
+    },
+    {
+        "title": "A Game of Thrones",
+        "author": "George R.R. Martin",
+        "category": "Fantasy",
+        "price": 19.99,
+        "image": "book11.jpg"
+    },
+    {
+        "title": "The Road",
+        "author": "Cormac McCarthy",
+        "category": "Dystopian",
+        "price": 12.49,
+        "image": "book12.jpg"
+    },
+    {
+        "title": "The Handmaid's Tale",
+        "author": "Margaret Atwood",
+        "category": "Dystopian",
+        "price": 14.49,
+        "image": "book13.jpg"
+    },
+    {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "category": "Science Fiction",
+        "price": 18.99,
+        "image": "book14.jpg"
+    },
+    {
+        "title": "Neuromancer",
+        "author": "William Gibson",
+        "category": "Science Fiction",
+        "price": 13.99,
+        "image": "book15.jpg"
+    },
+    {
+        "title": "Foundation",
+        "author": "Isaac Asimov",
+        "category": "Science Fiction",
+        "price": 16.49,
+        "image": "book16.jpg"
+    },
+    {
+        "title": "The Martian",
+        "author": "Andy Weir",
+        "category": "Science Fiction",
+        "price": 14.99,
+        "image": "book17.jpg"
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "category": "Romance",
+        "price": 9.49,
+        "image": "book18.jpg"
+    },
+    {
+        "title": "The Notebook",
+        "author": "Nicholas Sparks",
+        "category": "Romance",
+        "price": 11.99,
+        "image": "book19.jpg"
+    },
+    {
+        "title": "The Fault in Our Stars",
+        "author": "John Green",
+        "category": "Romance",
+        "price": 10.99,
+        "image": "book20.jpg"
+    }
+]

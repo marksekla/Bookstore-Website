@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personalized book recommendations from Bookworm Haven - Find your next great read.">
+    <meta name="keywords" content="book recommendations, suggested books, personalized reading, book suggestions">
+    <meta name="author" content="Mark Sekla">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Book Recommendations - Bookworm Haven</title>
+
+    <!-- Mapbox GL JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme-default.css">
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/theme-seasonal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                    <option value="default">Default Theme</option>
+                    <option value="dark">Dark Theme</option>
+                    <option value="seasonal">Seasonal Theme</option>
+                </select>
+            </div>
+
+            <div class="help-link">
+                <a href="help/help-index.html">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            </br>
+            <h1>Book Recommendations</h1>
+            <p class="intro-text">Find your next favorite book with our personalized recommendations. Tell us what you
+                like, and we'll suggest books tailored just for you.</p>
+
+            <!-- Recommendation Generator Form -->
+            <section class="recommendation-form-section">
+                <h2>Get Personalized Recommendations</h2>
+                <form id="recommendation-form" class="recommendation-form">
+                    <div class="form-group">
+                        <label for="favorite-genre">Your Favorite Genre:</label>
+                        <select id="favorite-genre" name="favorite-genre" required>
+                            <option value="">Select a genre</option>
+                            <option value="Classic">Classics</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Science Fiction">Science Fiction</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Dystopian">Dystopian</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="favorite-author">Favorite Author (Optional):</label>
+                        <input type="text" id="favorite-author" name="favorite-author">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Reading Level:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="level-easy" name="reading-level" value="easy">
+                            <label for="level-easy">Light</label>
+
+                            <input type="radio" id="level-medium" name="reading-level" value="medium" checked>
+                            <label for="level-medium">Medium</label>
+
+                            <input type="radio" id="level-hard" name="reading-level" value="hard">
+                            <label for="level-hard">Challenging</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Book Length Preference:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="length-short" name="book-length" value="short">
+                            <label for="length-short">Short (< 300 pages)</label>
+
+                            <input type="radio" id="length-medium" name="book-length" value="medium" checked>
+                            <label for="length-medium">Medium (300-500 pages)</label>
+
+                            <input type="radio" id="length-long" name="book-length" value="long">
+                            <label for="length-long">Long (> 500 pages)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recent-book">A Book You Recently Enjoyed (Optional):</label>
+                        <input type="text" id="recent-book" name="recent-book">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn">Get Recommendations</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Results Section (Initially Hidden) -->
+            <section id="recommendation-results" class="recommendation-results" style="display: none;">
+                <h2>Your Personalized Recommendations</h2>
+                <div class="book-grid" id="recommended-books-grid">
+                    <!-- Will be populated via JavaScript -->
+                </div>
+            </section>
+
+            <!-- Staff Picks Section -->
+            <section class="staff-picks">
+                <h2>Staff Picks This Month</h2>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="images/book17.jpg" alt="The Martian">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Martian</h3>
+                            <p class="book-author">Andy Weir</p>
+                            <p class="book-category">Science Fiction</p>
+                            <p class="book-description">A lone astronaut must survive on Mars after being left behind by
+                                his crew.</p>
+                            <p class="book-price">$14.99</p>
+                            <div class="book-actions">
+                                <a href="books/book17.html" class="btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="images/book6.jpg" alt="The Hobbit">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Hobbit</h3>
+                            <p class="book-author">J.R.R. Tolkien</p>
+                            <p class="book-category">Fantasy</p>
+                            <p class="book-description">A reluctant hobbit sets out on an adventure with a group of
+                                dwarves to reclaim their mountain home.</p>
+                            <p class="book-price">$14.99</p>
+                            <div class="book-actions">
+                                <a href="books/book6.html" class="btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="images/book1.jpg" alt="The Great Gatsby">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Great Gatsby</h3>
+                            <p class="book-author">F. Scott Fitzgerald</p>
+                            <p class="book-category">Classic</p>
+                            <p class="book-description">A portrait of the Jazz Age in all of its decadence and excess,
+                                through the story of the wealthy Jay Gatsby.</p>
+                            <p class="book-price">$10.99</p>
+                            <div class="book-actions">
+                                <a href="books/book1.html" class="btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reading Challenges -->
+            <section class="reading-challenges">
+                <h2>Reading Challenges</h2>
+                <p>Push your reading boundaries with these curated challenges. Each challenge includes a diverse
+                    selection of books to expand your literary horizons.</p>
+
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <h3>Around the World</h3>
+                        <p>Read books from 12 different countries in 12 months.</p>
+                        <a href="#" style="color: #000; text-decoration: none;">Join Challenge</a>
+                    </div>
+
+                    <div class="challenge-card">
+                        <h3>Literary Classics</h3>
+                        <p>Experience 10 timeless classics that have shaped literature.</p>
+                        <a href="#" style="color: #000; text-decoration: none;">Join Challenge</a>
+                    </div>
+
+                    <div class="challenge-card">
+                        <h3>Genre Explorer</h3>
+                        <p>Step outside your comfort zone with 8 different genres.</p>
+                        <a href="#" style="color: #000; text-decoration: none;">Join Challenge</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="video-section">
+                <h2>Author Spotlight Video</h2>
+                <p>Watch our interview with this month's featured author discussing their creative process and
+                    inspiration:</p>
+                <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1jMWaLOMtMS0qp1I18fE-RyzcA235ai7u/preview" width="100%" height="480"
+                    allow="autoplay" allowfullscreen></iframe>
+                </div>
+                <div class="video-description">
+                    <p><strong>Featured Author:</strong> J.K. Rowling</p>
+                    <p><strong>Latest Book:</strong> "Harry Potter and the Chamber of Secrets"</p>
+                    <p>In this exclusive interview, J.K. Rowling discusses how she develops characters, plots her
+                        novels, and
+                        finds inspiration in unexpected places.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="catalog.html">All Books</a></li>
+                        <li><a href="catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="quote.html">Book Quote</a></li>
+                        <li><a href="book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/api-calls.js"></script>
+    <script>
+        // Simple script to handle the recommendation form
+        document.addEventListener('DOMContentLoaded', function() {
+            const recommendationForm = document.getElementById('recommendation-form');
+            const resultsSection = document.getElementById('recommendation-results');
+            const recommendedGrid = document.getElementById('recommended-books-grid');
+            
+            // Books data from your JSON file
+            const books = [
+                {
+                    title: "The Hobbit",
+                    author: "J.R.R. Tolkien",
+                    category: "Fantasy",
+                    image: "images/book6.jpg",
+                    description: "A reluctant hobbit sets out on an adventure with a group of dwarves to reclaim their mountain home.",
+                    price: "$14.99"
+                },
+                {
+                    title: "Dune",
+                    author: "Frank Herbert",
+                    category: "Science Fiction",
+                    image: "images/book14.jpg",
+                    description: "A sweeping epic set on the desert planet Arrakis, where a great destiny awaits.",
+                    price: "$18.99"
+                },
+                {
+                    title: "The Great Gatsby",
+                    author: "F. Scott Fitzgerald",
+                    category: "Classic",
+                    image: "images/book1.jpg",
+                    description: "A portrait of the Jazz Age in all of its decadence and excess, through the story of the wealthy Jay Gatsby.",
+                    price: "$10.99"
+                },
+                {
+                    title: "1984",
+                    author: "George Orwell",
+                    category: "Dystopian",
+                    image: "images/book3.jpg",
+                    description: "A chilling dystopian tale of a totalitarian regime where individualism and independent thinking are persecuted.",
+                    price: "$11.49"
+                },
+                {
+                    title: "Pride and Prejudice",
+                    author: "Jane Austen",
+                    category: "Romance",
+                    image: "images/book18.jpg",
+                    description: "A timeless romance following the spirited Elizabeth Bennet and the proud Mr. Darcy.",
+                    price: "$9.49"
+                }
+            ];
+            
+            recommendationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const genre = document.getElementById('favorite-genre').value;
+                
+                // Clear previous recommendations
+                recommendedGrid.innerHTML = '';
+                
+                // Filter books based on selected genre, or show all if none selected
+                const filteredBooks = genre ? books.filter(book => book.category === genre) : books;
+                
+                // If no books match the criteria
+                if (filteredBooks.length === 0) {
+                    recommendedGrid.innerHTML = `
+                        <div class="no-results">
+                            <p>No books match your criteria. Please try different preferences.</p>
+                        </div>
+                    `;
+                } else {
+                    // Display the filtered books
+                    filteredBooks.forEach(book => {
+                        recommendedGrid.innerHTML += `
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <img src="${book.image}" alt="${book.title}">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">${book.title}</h3>
+                                    <p class="book-author">${book.author}</p>
+                                    <p class="book-category">${book.category}</p>
+                                    <p class="book-description">${book.description}</p>
+                                    <p class="book-price">${book.price}</p>
+                                    <div class="book-actions">
+                                        <a href="catalog.html" class="btn">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+                
+                // Show the results section
+                resultsSection.style.display = 'block';
+                
+                // Scroll to results
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>

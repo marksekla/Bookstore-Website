@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get a custom book quote at Bookworm Haven. Calculate prices for different book types, covers, and quantities.">
+    <meta name="keywords" content="book quote, book price calculator, book pricing, custom book order">
+    <meta name="author" content="Mark Sekla">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Book Quote Calculator - Bookworm Haven</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme-default.css">
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/theme-seasonal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+    
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="catalog.html">Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+    
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                        <option value="default">Default Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="seasonal">Seasonal Theme</option>
+                </select>
+            </div>
+    
+            <div class="help-link">
+                <a href="help/help-index.html">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            </br>
+            <h1>Book Quote Calculator</h1>
+
+            <div class="quote-container">
+                <div class="quote-intro">
+                    <p>Use our calculator to get an instant quote for your book order. Select your options below and
+                        click "Calculate Quote" to see the price.</p>
+                    <p>For special requests or large orders, please <a href="contact.html">contact us</a> directly.</p>
+                </div>
+
+                <!-- Quote Calculator Form -->
+                <div class="quote-form-container">
+                    <form id="quote-calculator" class="quote-form">
+                        <div class="form-group">
+                            <label for="book-type">Book Type:</label>
+                            <select id="book-type" name="book-type" required>
+                                <option value="">Select Book Type</option>
+                                <option value="fiction">Fiction</option>
+                                <option value="non-fiction">Non-Fiction</option>
+                                <option value="textbook">Textbook</option>
+                                <option value="children">Children's Book</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cover-type">Cover Type:</label>
+                            <select id="cover-type" name="cover-type" required>
+                                <option value="">Select Cover Type</option>
+                                <option value="paperback">Paperback</option>
+                                <option value="hardcover">Hardcover</option>
+                                <option value="leather">Leather Bound</option>
+                                <option value="digital">Digital (E-book)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn">Calculate Quote</button>
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Quote Result (will be shown after form submission) -->
+                <div id="quote-result" class="quote-result" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="catalog.html">All Books</a></li>
+                        <li><a href="catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="quote.html">Book Quote</a></li>
+                        <li><a href="book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/api-calls.js"></script>
+</body>
+
+</html>

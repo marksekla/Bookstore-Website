@@ -1,0 +1,71 @@
+/* Dark Theme */
+body {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+header {
+    background-color: #222;
+}
+
+.main-nav a {
+    color: #f5f5f5;
+}
+
+/* Make h2 titles white ONLY in dark theme, EXCEPT for the banner heading */
+.dark-theme h2:not(.banner h2),
+body.dark-theme .featured-books h2,
+body.dark-theme .section-title,
+body.dark h2:not(.banner h2),
+[data-theme="dark"] h2:not(.banner h2) {
+    color: #f5f5f5;
+}
+
+/* Change "Browse Books" button to purple ONLY in dark theme */
+body.dark-theme .banner .btn,
+.dark-theme .banner .btn,
+[data-theme="dark"] .banner .btn {
+    background-color: #9b59b6;
+}
+
+body.dark-theme .banner .btn:hover,
+.dark-theme .banner .btn:hover,
+[data-theme="dark"] .banner .btn:hover {
+    background-color: #8e44ad;
+}
+
+.book-card,
+.wiki-sidebar,
+.wiki-content {
+    background: #2c2c2c;
+    color: #f5f5f5;
+}
+
+.book-title {
+    color: #f5f5f5;
+}
+
+.book-author,
+.book-category {
+    color: #bbb;
+}
+
+.btn {
+    background-color: #9b59b6;
+}
+
+.btn:hover {
+    background-color: #8e44ad;
+}
+
+input,
+select,
+textarea {
+    background: #333;
+    border: 1px solid #555;
+    color: #f5f5f5;
+}
+
+footer {
+    background-color: #111;
+}

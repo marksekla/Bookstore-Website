@@ -1,0 +1,89 @@
+/* Seasonal Theme - Changes based on the current season */
+
+/* Spring Theme (Mar-May) */
+.spring-theme {
+    background-color: #e8f5e9;
+    color: #333;
+}
+
+.spring-theme header {
+    background-color: #c8e6c9;
+}
+
+.spring-theme .btn {
+    background-color: #4caf50;
+}
+
+.spring-theme .btn:hover {
+    background-color: #388e3c;
+}
+
+.spring-theme footer {
+    background-color: #2e7d32;
+}
+
+/* Summer Theme (Jun-Aug) */
+.summer-theme {
+    background-color: #fff3e0;
+    color: #333;
+}
+
+.summer-theme header {
+    background-color: #ffe0b2;
+}
+
+.summer-theme .btn {
+    background-color: #ff9800;
+}
+
+.summer-theme .btn:hover {
+    background-color: #f57c00;
+}
+
+.summer-theme footer {
+    background-color: #e65100;
+}
+
+/* Fall Theme (Sep-Nov) */
+.fall-theme {
+    background-color: #fff8e1;
+    color: #333;
+}
+
+.fall-theme header {
+    background-color: #ffecb3;
+}
+
+.fall-theme .btn {
+    background-color: #ff5722;
+}
+
+.fall-theme .btn:hover {
+    background-color: #e64a19;
+}
+
+.fall-theme footer {
+    background-color: #bf360c;
+}
+
+/* Winter Theme (Dec-Feb) */
+.winter-theme {
+    background-color: #e3f2fd;
+    color: #333;
+}
+
+.winter-theme header {
+    background-color: #bbdefb;
+}
+
+.winter-theme .btn {
+    background-color: #2196f3;
+}
+
+.winter-theme .btn:hover {
+    background-color: #1976d2;
+}
+
+.winter-theme footer {
+    background-color: #0d47a1;
+}

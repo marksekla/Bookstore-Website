@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Foundation by Isaac Asimov - The first book in the groundbreaking sci-fi epic about the fall and rise of a galactic empire, available at Bookworm Haven.">
+    <meta name="keywords" content="Foundation, Isaac Asimov, science fiction, galactic empire, psychohistory">
+    <meta name="author" content="Mark Sekla">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Foundation by Isaac Asimov - Bookworm Haven</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-default.css">
+    <link rel="stylesheet" href="../css/theme-dark.css">
+    <link rel="stylesheet" href="../css/theme-seasonal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../catalog.html">Books</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                        <option value="default">Default Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="seasonal">Seasonal Theme</option>
+                    </select>
+            </div>
+
+            <div class="help-link">
+                <a href="help-index.html" class="active">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            </br>
+            <h1>Book Details</h1>
+
+            <!-- Book Details -->
+            <div class="book-details">
+                <div class="book-details-image">
+                    <img src="../images/book16.jpg" alt="Foundation">
+                </div>
+
+                <div class="book-details-info">
+                    <h2>Foundation</h2>
+
+                    <div class="book-meta">
+                        <p><strong>Author:</strong> Isaac Asimov</p>
+                        <p><strong>Category:</strong> Science Fiction</p>
+                        <p><strong>Price:</strong> $<span id="base-price" data-price="16.49">16.49</span></p>
+                    </div>
+                    </br>
+                    <div class="book-description">
+                        <h3>Description</h3>
+                        <p>For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying. But only
+                            Hari Seldon, creator of the revolutionary science of psychohistory, can see into the
+                            future—to a dark age of ignorance, barbarism, and warfare that will last thirty thousand
+                            years.
+                        </p>
+                        </br>
+                        <p>To preserve knowledge and save humankind, Seldon gathers the best minds in the Empire—both
+                            scientists and scholars—and brings them to a bleak planet at the edge of the galaxy to serve
+                            as a beacon of hope for future generations. He calls his sanctuary the Foundation. But soon
+                            the fledgling Foundation finds itself at the mercy of corrupt warlords rising in the wake of
+                            the receding Empire. And mankind's last best hope is faced with an agonizing choice: submit
+                            to the barbarians and be overrun—or fight them and be destroyed.</p>
+                    </div>
+                    </br>
+                    <!-- Book Options -->
+                    <div class="book-options">
+                        <h3>Book Options</h3>
+
+                        <div class="option-group">
+                            <label for="cover-type">Cover Type:</label>
+                            <select id="cover-type" class="book-option-select">
+                                <option value="paperback" data-price="0">Paperback</option>
+                                <option value="hardcover" data-price="5.00">Hardcover (+$5.00)</option>
+                                <option value="leather" data-price="15.00">Leather Bound (+$15.00)</option>
+                                <option value="digital" data-price="-3.00">Digital E-book (-$3.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="edition">Edition:</label>
+                            <select id="edition" class="book-option-select">
+                                <option value="standard" data-price="0">Standard Edition</option>
+                                <option value="annotated" data-price="4.00">Annotated Edition (+$4.00)</option>
+                                <option value="illustrated" data-price="7.50">Illustrated Edition (+$7.50)</option>
+                                <option value="collectors" data-price="25.00">Collector's Edition (+$25.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" min="1" value="1">
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="book-actions">
+                        <button id="add-to-cart-detail" class="btn" data-book-id="16">Add to Cart</button>
+                        <button class="btn btn-secondary">Add to Wishlist</button>
+                    </div>
+
+                    <!-- Book Tabs -->
+                    <div class="book-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-button active" data-tab="details">Details</button>
+                            <button class="tab-button" data-tab="reviews">Reviews</button>
+                            <button class="tab-button" data-tab="author">About the Author</button>
+                        </div>
+
+                        <div class="tab-content" id="details-tab">
+                            <h3>Product Details</h3>
+                            <p><strong>Publisher:</strong> Del Rey</p>
+                            <p><strong>Language:</strong> English</p>
+                            <p><strong>Paperback:</strong> 244 pages</p>
+                            <p><strong>ISBN:</strong> 978-0553293357</p>
+                            <p><strong>Dimensions:</strong> 4.2 x 0.7 x 6.9 inches</p>
+                        </div>
+
+                        <div class="tab-content" id="reviews-tab" style="display: none;">
+                            <h3>Customer Reviews</h3>
+                            <div class="review">
+                                <p><strong>James M.</strong> ★★★★★</p>
+                                <p>Asimov's masterpiece that shaped generations of science fiction. The concept of
+                                    psychohistory is brilliant and the episodic structure keeps the narrative fresh.</p>
+                            </div>
+                            </br>
+                            <div class="review">
+                                <p><strong>Elena S.</strong> ★★★★☆</p>
+                                <p>A cerebral sci-fi classic that prioritizes ideas over action. What it lacks in
+                                    character development, it makes up for with its sweeping vision of humanity's
+                                    future.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="author-tab" style="display: none;">
+                            <h3>About Isaac Asimov</h3>
+                            <p>Isaac Asimov (January 2, 1920 – April 6, 1992) was an American writer and professor of
+                                biochemistry at Boston University. He was known for his works of science fiction and
+                                popular science. Asimov was a prolific writer who wrote or edited more than 500 books
+                                and an estimated 90,000 letters and postcards. His books have been published in 9 of the
+                                10 major categories of the Dewey Decimal Classification. Asimov wrote hard science
+                                fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one
+                                of the "Big Three" science fiction writers during his lifetime. Asimov's most famous
+                                work is the "Foundation" series, the first three books of which won the one-time Hugo
+                                Award for "Best All-Time Series" in 1966.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Books -->
+            <div class="related-books">
+                <h2>You Might Also Like</h2>
+                <p>Check back soon for personalized book recommendations!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../catalog.html">All Books</a></li>
+                        <li><a href="../catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="../catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="../catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../quote.html">Book Quote</a></li>
+                        <li><a href="../book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/themes.js"></script>
+    <script src="../js/api-calls.js"></script>
+</body>
+
+</html>

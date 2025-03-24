@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pride and Prejudice by Jane Austen - The beloved classic romance that has delighted readers for generations, available at Bookworm Haven.">
+    <meta name="keywords" content="Pride and Prejudice, Jane Austen, classic literature, romance, social satire">
+    <meta name="author" content="Mark Sekla">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Pride and Prejudice by Jane Austen - Bookworm Haven</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-default.css">
+    <link rel="stylesheet" href="../css/theme-dark.css">
+    <link rel="stylesheet" href="../css/theme-seasonal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../catalog.html">Books</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                        <option value="default">Default Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="seasonal">Seasonal Theme</option>
+                    </select>
+            </div>
+
+            <div class="help-link">
+                <a href="help-index.html" class="active">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            </br>
+            <h1>Book Details</h1>
+
+            <!-- Book Details -->
+            <div class="book-details">
+                <div class="book-details-image">
+                    <img src="../images/book18.jpg" alt="Pride and Prejudice">
+                </div>
+
+                <div class="book-details-info">
+                    <h2>Pride and Prejudice</h2>
+
+                    <div class="book-meta">
+                        <p><strong>Author:</strong> Jane Austen</p>
+                        <p><strong>Category:</strong> Romance</p>
+                        <p><strong>Price:</strong> $<span id="base-price" data-price="9.49">9.49</span></p>
+                    </div>
+                    </br>
+                    <div class="book-description">
+                        <h3>Description</h3>
+                        <p>Since its immediate success in 1813, Pride and Prejudice has remained one of the most popular novels in the English language. Jane Austen called this brilliant work "her own darling child" and its vivacious heroine, Elizabeth Bennet, "as delightful a creature as ever appeared in print."
+                        </p>
+                        </br>
+                        <p>The romantic clash between the opinionated Elizabeth and her proud beau, Mr. Darcy, is a splendid performance of civilized sparring. And Jane Austen's radiant wit sparkles as her characters dance a delicate quadrille of flirtation and intrigue, making this book the most superb comedy of manners of Regency England. Pride and Prejudice is a classic tale of love and misunderstanding that showcases the splendid wit of Jane Austen.</p>
+                    </div>
+                    </br>
+                    <!-- Book Options -->
+                    <div class="book-options">
+                        <h3>Book Options</h3>
+
+                        <div class="option-group">
+                            <label for="cover-type">Cover Type:</label>
+                            <select id="cover-type" class="book-option-select">
+                                <option value="paperback" data-price="0">Paperback</option>
+                                <option value="hardcover" data-price="5.00">Hardcover (+$5.00)</option>
+                                <option value="leather" data-price="15.00">Leather Bound (+$15.00)</option>
+                                <option value="digital" data-price="-3.00">Digital E-book (-$3.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="edition">Edition:</label>
+                            <select id="edition" class="book-option-select">
+                                <option value="standard" data-price="0">Standard Edition</option>
+                                <option value="annotated" data-price="4.00">Annotated Edition (+$4.00)</option>
+                                <option value="illustrated" data-price="7.50">Illustrated Edition (+$7.50)</option>
+                                <option value="collectors" data-price="25.00">Collector's Edition (+$25.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" min="1" value="1">
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="book-actions">
+                        <button id="add-to-cart-detail" class="btn" data-book-id="18">Add to Cart</button>
+                        <button class="btn btn-secondary">Add to Wishlist</button>
+                    </div>
+
+                    <!-- Book Tabs -->
+                    <div class="book-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-button active" data-tab="details">Details</button>
+                            <button class="tab-button" data-tab="reviews">Reviews</button>
+                            <button class="tab-button" data-tab="author">About the Author</button>
+                        </div>
+
+                        <div class="tab-content" id="details-tab">
+                            <h3>Product Details</h3>
+                            <p><strong>Publisher:</strong> Penguin Classics</p>
+                            <p><strong>Language:</strong> English</p>
+                            <p><strong>Paperback:</strong> 432 pages</p>
+                            <p><strong>ISBN:</strong> 978-0141439518</p>
+                            <p><strong>Dimensions:</strong> 5 x 0.9 x 7.7 inches</p>
+                        </div>
+
+                        <div class="tab-content" id="reviews-tab" style="display: none;">
+                            <h3>Customer Reviews</h3>
+                            <div class="review">
+                                <p><strong>Victoria N.</strong> ★★★★★</p>
+                                <p>Two centuries later and this novel still captivates readers with its wit, charm, and incisive social commentary. Elizabeth Bennet remains one of literature's most beloved heroines.</p>
+                            </div>
+                            </br>
+                            <div class="review">
+                                <p><strong>Jonathan P.</strong> ★★★★★</p>
+                                <p>Don't be fooled by the "romance" label - this is a brilliant satire full of keen observations about social class, marriage, and personal growth. Austen's prose is delightful.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="author-tab" style="display: none;">
+                            <h3>About Jane Austen</h3>
+                            <p>Jane Austen (16 December 1775 – 18 July 1817) was an English novelist known primarily for her six major novels, which interpret, critique and comment upon the British landed gentry at the end of the 18th century. Austen's plots often explore the dependence of women on marriage in the pursuit of favorable social standing and economic security. Her works critique the novels of sensibility of the second half of the 18th century and are part of the transition to 19th-century literary realism. Her use of biting irony, along with her realism and social commentary, have earned her acclaim among critics and scholars. With the publication of Sense and Sensibility (1811), Pride and Prejudice (1813), Mansfield Park (1814) and Emma (1816), she achieved success as a published writer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Books -->
+            <div class="related-books">
+                <h2>You Might Also Like</h2>
+                <p>Check back soon for personalized book recommendations!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../catalog.html">All Books</a></li>
+                        <li><a href="../catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="../catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="../catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../quote.html">Book Quote</a></li>
+                        <li><a href="../book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/themes.js"></script>
+    <script src="../js/api-calls.js"></script>
+</body>
+
+</html>

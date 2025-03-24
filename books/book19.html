@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Notebook by Nicholas Sparks - A heartwarming story of enduring love that has captivated millions, available at Bookworm Haven.">
+    <meta name="keywords" content="The Notebook, Nicholas Sparks, romance, love story, contemporary fiction">
+    <meta name="author" content="Mark Sekla">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>The Notebook by Nicholas Sparks - Bookworm Haven</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-default.css">
+    <link rel="stylesheet" href="../css/theme-dark.css">
+    <link rel="stylesheet" href="../css/theme-seasonal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../catalog.html">Books</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                        <option value="default">Default Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="seasonal">Seasonal Theme</option>
+                    </select>
+            </div>
+
+            <div class="help-link">
+                <a href="help-index.html" class="active">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            </br>
+            <h1>Book Details</h1>
+
+            <!-- Book Details -->
+            <div class="book-details">
+                <div class="book-details-image">
+                    <img src="../images/book19.jpg" alt="The Notebook">
+                </div>
+
+                <div class="book-details-info">
+                    <h2>The Notebook</h2>
+
+                    <div class="book-meta">
+                        <p><strong>Author:</strong> Nicholas Sparks</p>
+                        <p><strong>Category:</strong> Romance</p>
+                        <p><strong>Price:</strong> $<span id="base-price" data-price="11.99">11.99</span></p>
+                    </div>
+                    </br>
+                    <div class="book-description">
+                        <h3>Description</h3>
+                        <p>Every so often a love story so captures our hearts that it becomes more than a story—it becomes an experience to remember forever. The Notebook is such a book. It is a celebration of how passion can be ageless and timeless, a tale that moves us to laughter and tears and makes us believe in true love all over again.
+                        </p>
+                        </br>
+                        <p>At thirty-one, Noah Calhoun, back in coastal North Carolina after World War II, is haunted by images of the girl he lost more than a decade earlier. At twenty-nine, socialite Allie Nelson is about to marry a wealthy lawyer, but she cannot stop thinking about the boy who long ago stole her heart. Thus begins the story of a love so enduring and deep it can turn tragedy into triumph, and may even have the power to create a miracle.</p>
+                    </div>
+                    </br>
+                    <!-- Book Options -->
+                    <div class="book-options">
+                        <h3>Book Options</h3>
+
+                        <div class="option-group">
+                            <label for="cover-type">Cover Type:</label>
+                            <select id="cover-type" class="book-option-select">
+                                <option value="paperback" data-price="0">Paperback</option>
+                                <option value="hardcover" data-price="5.00">Hardcover (+$5.00)</option>
+                                <option value="leather" data-price="15.00">Leather Bound (+$15.00)</option>
+                                <option value="digital" data-price="-3.00">Digital E-book (-$3.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="edition">Edition:</label>
+                            <select id="edition" class="book-option-select">
+                                <option value="standard" data-price="0">Standard Edition</option>
+                                <option value="annotated" data-price="4.00">Annotated Edition (+$4.00)</option>
+                                <option value="illustrated" data-price="7.50">Illustrated Edition (+$7.50)</option>
+                                <option value="collectors" data-price="25.00">Collector's Edition (+$25.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" min="1" value="1">
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="book-actions">
+                        <button id="add-to-cart-detail" class="btn" data-book-id="19">Add to Cart</button>
+                        <button class="btn btn-secondary">Add to Wishlist</button>
+                    </div>
+
+                    <!-- Book Tabs -->
+                    <div class="book-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-button active" data-tab="details">Details</button>
+                            <button class="tab-button" data-tab="reviews">Reviews</button>
+                            <button class="tab-button" data-tab="author">About the Author</button>
+                        </div>
+
+                        <div class="tab-content" id="details-tab">
+                            <h3>Product Details</h3>
+                            <p><strong>Publisher:</strong> Grand Central Publishing</p>
+                            <p><strong>Language:</strong> English</p>
+                            <p><strong>Paperback:</strong> 224 pages</p>
+                            <p><strong>ISBN:</strong> 978-1455582877</p>
+                            <p><strong>Dimensions:</strong> 5.25 x 0.63 x 8 inches</p>
+                        </div>
+
+                        <div class="tab-content" id="reviews-tab" style="display: none;">
+                            <h3>Customer Reviews</h3>
+                            <div class="review">
+                                <p><strong>Melissa R.</strong> ★★★★★</p>
+                                <p>A beautiful, timeless love story that brought tears to my eyes. Sparks has a gift for crafting romances that feel both authentic and magical.</p>
+                            </div>
+                            </br>
+                            <div class="review">
+                                <p><strong>Paul J.</strong> ★★★★☆</p>
+                                <p>I'm not typically a romance reader, but this book captured my heart. The depth of emotion and the exploration of enduring love transcends the typical romance genre.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="author-tab" style="display: none;">
+                            <h3>About Nicholas Sparks</h3>
+                            <p>Nicholas Sparks is one of the world's most beloved storytellers. All of his books have been New York Times bestsellers, with over 105 million copies sold worldwide, in more than 50 languages, including over 75 million copies in the United States alone. Sparks wrote one of his best-known stories, The Notebook, over a period of six months at age 28. It was published in 1996 and he followed with the novels Message in a Bottle (1998), A Walk to Remember (1999), The Rescue (2000), A Bend in the Road (2001), Nights in Rodanthe (2002), The Guardian (2003), The Wedding (2003), True Believer (2005) and its sequel, At First Sight (2005), Dear John (2006), The Choice (2007), The Lucky One (2008), The Last Song (2009), Safe Haven (2010), The Best of Me (2011), and The Longest Ride (2013), as well as the 2004 non-fiction memoir Three Weeks With My Brother, co-written with his brother Micah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Books -->
+            <div class="related-books">
+                <h2>You Might Also Like</h2>
+                <p>Check back soon for personalized book recommendations!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../catalog.html">All Books</a></li>
+                        <li><a href="../catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="../catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="../catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../quote.html">Book Quote</a></li>
+                        <li><a href="../book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/themes.js"></script>
+    <script src="../js/api-calls.js"></script>
+</body>
+
+</html>

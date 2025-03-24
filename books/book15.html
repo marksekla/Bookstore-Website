@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Neuromancer by William Gibson - The groundbreaking cyberpunk novel that defined a genre, available at Bookworm Haven.">
+    <meta name="keywords" content="Neuromancer, William Gibson, cyberpunk, science fiction, hacking, cyberspace">
+    <meta name="author" content="Mark Sekla">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Neuromancer by William Gibson - Bookworm Haven</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-default.css">
+    <link rel="stylesheet" href="../css/theme-dark.css">
+    <link rel="stylesheet" href="../css/theme-seasonal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../catalog.html">Books</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                        <option value="default">Default Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="seasonal">Seasonal Theme</option>
+                    </select>
+            </div>
+
+            <div class="help-link">
+                <a href="help-index.html" class="active">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            </br>
+            <h1>Book Details</h1>
+
+            <!-- Book Details -->
+            <div class="book-details">
+                <div class="book-details-image">
+                    <img src="../images/book15.jpg" alt="Neuromancer">
+                </div>
+
+                <div class="book-details-info">
+                    <h2>Neuromancer</h2>
+
+                    <div class="book-meta">
+                        <p><strong>Author:</strong> William Gibson</p>
+                        <p><strong>Category:</strong> Science Fiction</p>
+                        <p><strong>Price:</strong> $<span id="base-price" data-price="13.99">13.99</span></p>
+                    </div>
+                    </br>
+                    <div class="book-description">
+                        <h3>Description</h3>
+                        <p>Case was the sharpest data-thief in the matrix—until he crossed the wrong people and they
+                            crippled his nervous system, banishing him from cyberspace. Now a mysterious new employer
+                            has recruited him for a last-chance run at an unthinkably powerful artificial intelligence.
+                        </p>
+                        </br>
+                        <p>With a dead man riding shotgun and Molly, a mirror-eyed street-samurai, to watch his back,
+                            Case is ready for the adventure that upped the ante on an entire genre of fiction.
+                            Neuromancer was the first fully-realized glimpse of humankind's digital future—a shocking
+                            vision that has challenged our assumptions about technology and ourselves, reinvented the
+                            way we speak and think, and forever altered the landscape of our imaginations.</p>
+                    </div>
+                    </br>
+                    <!-- Book Options -->
+                    <div class="book-options">
+                        <h3>Book Options</h3>
+
+                        <div class="option-group">
+                            <label for="cover-type">Cover Type:</label>
+                            <select id="cover-type" class="book-option-select">
+                                <option value="paperback" data-price="0">Paperback</option>
+                                <option value="hardcover" data-price="5.00">Hardcover (+$5.00)</option>
+                                <option value="leather" data-price="15.00">Leather Bound (+$15.00)</option>
+                                <option value="digital" data-price="-3.00">Digital E-book (-$3.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="edition">Edition:</label>
+                            <select id="edition" class="book-option-select">
+                                <option value="standard" data-price="0">Standard Edition</option>
+                                <option value="annotated" data-price="4.00">Annotated Edition (+$4.00)</option>
+                                <option value="illustrated" data-price="7.50">Illustrated Edition (+$7.50)</option>
+                                <option value="collectors" data-price="25.00">Collector's Edition (+$25.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" min="1" value="1">
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="book-actions">
+                        <button id="add-to-cart-detail" class="btn" data-book-id="15">Add to Cart</button>
+                        <button class="btn btn-secondary">Add to Wishlist</button>
+                    </div>
+
+                    <!-- Book Tabs -->
+                    <div class="book-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-button active" data-tab="details">Details</button>
+                            <button class="tab-button" data-tab="reviews">Reviews</button>
+                            <button class="tab-button" data-tab="author">About the Author</button>
+                        </div>
+
+                        <div class="tab-content" id="details-tab">
+                            <h3>Product Details</h3>
+                            <p><strong>Publisher:</strong> Ace</p>
+                            <p><strong>Language:</strong> English</p>
+                            <p><strong>Paperback:</strong> 271 pages</p>
+                            <p><strong>ISBN:</strong> 978-0441569595</p>
+                            <p><strong>Dimensions:</strong> 4.2 x 0.8 x 7.5 inches</p>
+                        </div>
+
+                        <div class="tab-content" id="reviews-tab" style="display: none;">
+                            <h3>Customer Reviews</h3>
+                            <div class="review">
+                                <p><strong>Kevin R.</strong> ★★★★★</p>
+                                <p>Revolutionary in every sense. Gibson's neon-lit vision of the future and his
+                                    razor-sharp prose created a whole new language for science fiction.</p>
+                            </div>
+                            </br>
+                            <div class="review">
+                                <p><strong>Anita M.</strong> ★★★★☆</p>
+                                <p>Simultaneously dated and prescient. It's remarkable how many technological concepts
+                                    Gibson predicted decades before they became reality.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="author-tab" style="display: none;">
+                            <h3>About William Gibson</h3>
+                            <p>William Ford Gibson (born March 17, 1948) is an American-Canadian speculative fiction
+                                writer and essayist widely credited with pioneering the science fiction subgenre known
+                                as cyberpunk. Beginning his writing career in the late 1970s, his early works were noir,
+                                near-future stories that explored the effects of technology, cybernetics, and computer
+                                networks on humans—a "combination of lowlife and high tech"—and helped to create an
+                                iconography for the information age before the ubiquity of the Internet in the 1990s.
+                                Gibson coined the term "cyberspace" in his short story "Burning Chrome" (1982) and later
+                                popularized the concept in his acclaimed debut novel Neuromancer (1984). These early
+                                works of Gibson's have been credited with "renovating" science fiction literature in the
+                                1980s.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Books -->
+            <div class="related-books">
+                <h2>You Might Also Like</h2>
+                <p>Check back soon for personalized book recommendations!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../catalog.html">All Books</a></li>
+                        <li><a href="../catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="../catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="../catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../quote.html">Book Quote</a></li>
+                        <li><a href="../book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/themes.js"></script>
+    <script src="../js/api-calls.js"></script>
+</body>
+
+</html>

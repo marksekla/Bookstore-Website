@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Road by Cormac McCarthy - A haunting post-apocalyptic novel about survival and hope, available at Bookworm Haven.">
+    <meta name="keywords" content="The Road, Cormac McCarthy, dystopian, post-apocalyptic, Pulitzer Prize">
+    <meta name="author" content="Mark Sekla">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>The Road by Cormac McCarthy - Bookworm Haven</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-default.css">
+    <link rel="stylesheet" href="../css/theme-dark.css">
+    <link rel="stylesheet" href="../css/theme-seasonal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../catalog.html">Books</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                        <option value="default">Default Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="seasonal">Seasonal Theme</option>
+                    </select>
+            </div>
+
+            <div class="help-link">
+                <a href="help-index.html" class="active">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            </br>
+            <h1>Book Details</h1>
+
+            <!-- Book Details -->
+            <div class="book-details">
+                <div class="book-details-image">
+                    <img src="../images/book12.jpg" alt="The Road">
+                </div>
+
+                <div class="book-details-info">
+                    <h2>The Road</h2>
+
+                    <div class="book-meta">
+                        <p><strong>Author:</strong> Cormac McCarthy</p>
+                        <p><strong>Category:</strong> Dystopian</p>
+                        <p><strong>Price:</strong> $<span id="base-price" data-price="12.49">12.49</span></p>
+                    </div>
+                    </br>
+                    <div class="book-description">
+                        <h3>Description</h3>
+                        <p>A father and his son walk alone through burned America. Nothing moves in the ravaged
+                            landscape save the ash on the wind. It is cold enough to crack stones, and when the snow
+                            falls it is gray. The sky is dark. Their destination is the coast, although they don't know
+                            what, if anything, awaits them there.
+                        </p>
+                        </br>
+                        <p>They have nothing; just a pistol to defend themselves against the lawless bands that stalk
+                            the road, the clothes they are wearing, a cart of scavenged food—and each other. The Road is
+                            the profoundly moving story of a journey. It boldly imagines a future in which no hope
+                            remains, but in which the father and his son, "each the other's world entire," are sustained
+                            by love. Awesome in the totality of its vision, it is an unflinching meditation on the worst
+                            and the best that we are capable of: ultimate destructiveness, desperate tenacity, and the
+                            tenderness that keeps two people alive in the face of total devastation.</p>
+                    </div>
+                    </br>
+                    <!-- Book Options -->
+                    <div class="book-options">
+                        <h3>Book Options</h3>
+
+                        <div class="option-group">
+                            <label for="cover-type">Cover Type:</label>
+                            <select id="cover-type" class="book-option-select">
+                                <option value="paperback" data-price="0">Paperback</option>
+                                <option value="hardcover" data-price="5.00">Hardcover (+$5.00)</option>
+                                <option value="leather" data-price="15.00">Leather Bound (+$15.00)</option>
+                                <option value="digital" data-price="-3.00">Digital E-book (-$3.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="edition">Edition:</label>
+                            <select id="edition" class="book-option-select">
+                                <option value="standard" data-price="0">Standard Edition</option>
+                                <option value="annotated" data-price="4.00">Annotated Edition (+$4.00)</option>
+                                <option value="illustrated" data-price="7.50">Illustrated Edition (+$7.50)</option>
+                                <option value="collectors" data-price="25.00">Collector's Edition (+$25.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" min="1" value="1">
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="book-actions">
+                        <button id="add-to-cart-detail" class="btn" data-book-id="12">Add to Cart</button>
+                        <button class="btn btn-secondary">Add to Wishlist</button>
+                    </div>
+
+                    <!-- Book Tabs -->
+                    <div class="book-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-button active" data-tab="details">Details</button>
+                            <button class="tab-button" data-tab="reviews">Reviews</button>
+                            <button class="tab-button" data-tab="author">About the Author</button>
+                        </div>
+
+                        <div class="tab-content" id="details-tab">
+                            <h3>Product Details</h3>
+                            <p><strong>Publisher:</strong> Vintage</p>
+                            <p><strong>Language:</strong> English</p>
+                            <p><strong>Paperback:</strong> 287 pages</p>
+                            <p><strong>ISBN:</strong> 978-0307387899</p>
+                            <p><strong>Dimensions:</strong> 5.2 x 0.7 x 8 inches</p>
+                        </div>
+
+                        <div class="tab-content" id="reviews-tab" style="display: none;">
+                            <h3>Customer Reviews</h3>
+                            <div class="review">
+                                <p><strong>Patricia H.</strong> ★★★★★</p>
+                                <p>Hauntingly beautiful in its starkness. McCarthy's sparse prose perfectly captures the
+                                    desolation of the world and the enduring power of love.</p>
+                            </div>
+                            </br>
+                            <div class="review">
+                                <p><strong>Ethan B.</strong> ★★★★★</p>
+                                <p>One of the most emotionally affecting books I've ever read. The minimalist style
+                                    somehow makes the story even more powerful and devastating.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="author-tab" style="display: none;">
+                            <h3>About Cormac McCarthy</h3>
+                            <p>Cormac McCarthy (July 20, 1933 – June 13, 2023) was an American novelist, playwright,
+                                short-story writer, and screenwriter. He wrote twelve novels, two plays, five
+                                screenplays, and three short stories, spanning the Western and post-apocalyptic genres.
+                                He was known for his graphic depictions of violence and his unique writing style,
+                                recognizable by its lack of punctuation and attribution. McCarthy was awarded the
+                                Pulitzer Prize in Fiction for The Road (2006), and his 1992 novel All the Pretty Horses
+                                won both the National Book Award and National Book Critics Circle Award. His 2005 novel
+                                No Country for Old Men was adapted into a 2007 film of the same name, which won four
+                                Academy Awards, including Best Picture. For All the Pretty Horses, McCarthy received the
+                                National Book Award and National Book Critics Circle Award.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Books -->
+            <div class="related-books">
+                <h2>You Might Also Like</h2>
+                <p>Check back soon for personalized book recommendations!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../catalog.html">All Books</a></li>
+                        <li><a href="../catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="../catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="../catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../quote.html">Book Quote</a></li>
+                        <li><a href="../book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/themes.js"></script>
+    <script src="../js/api-calls.js"></script>
+</body>
+
+</html>

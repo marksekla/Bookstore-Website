@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Hobbit by J.R.R. Tolkien - The beloved fantasy adventure that started it all, available at Bookworm Haven.">
+    <meta name="keywords" content="The Hobbit, J.R.R. Tolkien, fantasy, adventure, Middle-earth">
+    <meta name="author" content="Mark Sekla">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>The Hobbit by J.R.R. Tolkien - Bookworm Haven</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-default.css">
+    <link rel="stylesheet" href="../css/theme-dark.css">
+    <link rel="stylesheet" href="../css/theme-seasonal.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Bookworm Haven Logo">
+                <h1>Bookworm Haven</h1>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../catalog.html">Books</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../cart.html">Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-switcher">
+                <select id="theme-selector">
+                        <option value="default">Default Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="seasonal">Seasonal Theme</option>
+                    </select>
+            </div>
+
+            <div class="help-link">
+                <a href="help-index.html" class="active">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            </br>
+            <h1>Book Details</h1>
+
+            <!-- Book Details -->
+            <div class="book-details">
+                <div class="book-details-image">
+                    <img src="../images/book6.jpg" alt="The Hobbit">
+                </div>
+
+                <div class="book-details-info">
+                    <h2>The Hobbit</h2>
+
+                    <div class="book-meta">
+                        <p><strong>Author:</strong> J.R.R. Tolkien</p>
+                        <p><strong>Category:</strong> Fantasy</p>
+                        <p><strong>Price:</strong> $<span id="base-price" data-price="14.99">14.99</span></p>
+                    </div>
+                    </br>
+                    <div class="book-description">
+                        <h3>Description</h3>
+                        <p>Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any
+                            farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf
+                            and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure.
+                        </p>
+                        </br>
+                        <p>They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a
+                            large and very dangerous dragon. Bilbo reluctantly joins their quest, unaware that on his
+                            journey to the Lonely Mountain he will encounter both a magic ring and a frightening
+                            creature known as Gollum. Written for J.R.R. Tolkien's own children, The Hobbit has sold
+                            many millions of copies worldwide and established itself as a modern classic.</p>
+                    </div>
+                    </br>
+                    <!-- Book Options -->
+                    <div class="book-options">
+                        <h3>Book Options</h3>
+
+                        <div class="option-group">
+                            <label for="cover-type">Cover Type:</label>
+                            <select id="cover-type" class="book-option-select">
+                                <option value="paperback" data-price="0">Paperback</option>
+                                <option value="hardcover" data-price="5.00">Hardcover (+$5.00)</option>
+                                <option value="leather" data-price="15.00">Leather Bound (+$15.00)</option>
+                                <option value="digital" data-price="-3.00">Digital E-book (-$3.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="edition">Edition:</label>
+                            <select id="edition" class="book-option-select">
+                                <option value="standard" data-price="0">Standard Edition</option>
+                                <option value="annotated" data-price="4.00">Annotated Edition (+$4.00)</option>
+                                <option value="illustrated" data-price="7.50">Illustrated Edition (+$7.50)</option>
+                                <option value="collectors" data-price="25.00">Collector's Edition (+$25.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" min="1" value="1">
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="book-actions">
+                        <button id="add-to-cart-detail" class="btn" data-book-id="6">Add to Cart</button>
+                        <button class="btn btn-secondary">Add to Wishlist</button>
+                    </div>
+
+                    <!-- Book Tabs -->
+                    <div class="book-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-button active" data-tab="details">Details</button>
+                            <button class="tab-button" data-tab="reviews">Reviews</button>
+                            <button class="tab-button" data-tab="author">About the Author</button>
+                        </div>
+
+                        <div class="tab-content" id="details-tab">
+                            <h3>Product Details</h3>
+                            <p><strong>Publisher:</strong> Houghton Mifflin Harcourt</p>
+                            <p><strong>Language:</strong> English</p>
+                            <p><strong>Paperback:</strong> 300 pages</p>
+                            <p><strong>ISBN:</strong> 978-0618260300</p>
+                            <p><strong>Dimensions:</strong> 5.5 x 0.8 x 8.25 inches</p>
+                        </div>
+
+                        <div class="tab-content" id="reviews-tab" style="display: none;">
+                            <h3>Customer Reviews</h3>
+                            <div class="review">
+                                <p><strong>Robert J.</strong> ★★★★★</p>
+                                <p>A perfect introduction to Middle-earth. Tolkien's world-building is unmatched, and
+                                    the adventure is captivating from start to finish.</p>
+                            </div>
+                            </br>
+                            <div class="review">
+                                <p><strong>Jessica L.</strong> ★★★★★</p>
+                                <p>I've read this book countless times and still find new details to appreciate. A true
+                                    masterpiece that appeals to all ages.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="author-tab" style="display: none;">
+                            <h3>About J.R.R. Tolkien</h3>
+                            <p>John Ronald Reuel Tolkien CBE FRSL (January 3, 1892 – September 2, 1973) was an English
+                                writer, poet, philologist, and academic. He was the author of the high fantasy works The
+                                Hobbit and The Lord of the Rings. From 1925 to 1945, Tolkien was the Rawlinson and
+                                Bosworth Professor of Anglo-Saxon and a Fellow of Pembroke College, both at the
+                                University of Oxford. He then moved to Merton College, Oxford, where he was the Merton
+                                Professor of English Language and Literature from 1945 to 1959. Tolkien was a close
+                                friend of C. S. Lewis, a co-member of the informal literary discussion group The
+                                Inklings. Tolkien's Middle-earth fantasy works have been translated into dozens of
+                                languages and have inspired countless works of fantasy literature, films, video games,
+                                and artwork.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Books -->
+            <div class="related-books">
+                <h2>You Might Also Like</h2>
+                <p>Check back soon for personalized book recommendations!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- ADJUST GAP BETWEEN COLUMNS HERE -->
+            <div class="footer-grid" style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="footer-column" style="width: 20%;">
+                    <h3>Bookworm Haven</h3>
+                    <p>Your neighborhood bookstore since 2020.</p>
+                </div>
+                <div class="footer-column" style="width: 11%;">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../catalog.html">All Books</a></li>
+                        <li><a href="../catalog.html?category=Classic">Classics</a></li>
+                        <li><a href="../catalog.html?category=Fantasy">Fantasy</a></li>
+                        <li><a href="../catalog.html?category=Science Fiction">Sci-Fi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 15%;">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../quote.html">Book Quote</a></li>
+                        <li><a href="../book-recommendation.html">Book Recommendations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="width: 21%;">
+                    <h3>Contact</h3>
+                    <p>123 Book Lane, Windsor, ON</p>
+                    <p>Phone: (519) 123-4567</p>
+                    <p>Email: info@bookwormhaven.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bookworm Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/themes.js"></script>
+    <script src="../js/api-calls.js"></script>
+</body>
+
+</html>
